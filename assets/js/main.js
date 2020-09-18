@@ -431,7 +431,7 @@ $('.courses-actives').slick({
   });
 
 
-//17.  Progress barfiller
+/*17.  Progress barfiller
 
   $('#bar1').barfiller();
   $('#bar2').barfiller();
@@ -439,5 +439,5 @@ $('.courses-actives').slick({
   $('#bar4').barfiller();
   $('#bar5').barfiller();
   $('#bar6').barfiller();
-
+*/
 })(jQuery);
