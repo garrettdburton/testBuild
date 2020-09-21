@@ -136,7 +136,7 @@
                                     <div class="serial col-3">C2E</div>
                                     <div class="serial col-2">01-15-2020</div>
                                     <div class="serial col-2">02-15-2020</div>
-                                   
+
                                 </div>
                                 <div class="table-row">
                                     <div class="serial col-1">02</div>
@@ -147,15 +147,71 @@
                                     <div class="serial col-2">06-27-2020</div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial col-1">01</div>
+                                    <div class="serial col-1">03</div>
                                     <div class="serial col-1">Visitor</div>
                                     <div class="serial col-3">No control</div>
                                     <div class="serial col-3">None</div>
                                     <div class="serial col-2">11-02-2021</div>
                                     <div class="serial col-2">12-12-2022</div>
                                 </div>
+                                <div class="table-row addRow-0">
+
+                                </div>
+
                                 <div class="table-row">
-                                    <div class="mx-auto p-3"><button type="button" class="btn btn-success" id="add">Add</button></div>
+                                    <div class="mx-auto p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="add">Add</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- Modal -->
+                    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="">Add a new user</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group mx-auto col-md-8">
+                                                <label>Role</label>
+                                                <input type="text" class="form-control" id="" placeholder="Role">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group mx-auto col-md-8">
+                                                <label>Description</label>
+                                                <input type="text" class="form-control" id="" placeholder="Description">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group mx-auto col-md-8">
+                                                <label>Neighborhood</label>
+                                                <input type="text" class="form-control" id="" placeholder="Neighborhood">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4 mx-auto">
+                                                <label>Start Date</label>
+                                                <input type="text" class="form-control" id="">
+                                            </div>
+                                            <div class="form-group col-md-4 mx-auto">
+                                                <label>End Date</label>
+                                                <input type="text" class="form-control" id="">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary mx-auto">Add User</button>
                                 </div>
                             </div>
                         </div>
