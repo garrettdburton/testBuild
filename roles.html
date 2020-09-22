@@ -66,7 +66,7 @@
                                                 <ul id="navigation">                                                                                          
                                                     <li class="active" ><a href="index.html">Home</a></li>
                                                     <li><a href="">Reports</a></li>
-                                                    <li><a href="">Roles</a></li>
+                                                    <li><a href="roles.html">Roles</a></li>
                                                     <li><a href="#">Report Roles</a></li>
                                                     <li><a href="">Users</a></li>
                                                     <li><a href="">Users Roles</a></li>
@@ -120,7 +120,7 @@
                     <div class="section-top-border">
                         <h3 class="mb-30">Roles</h3>
                         <div class="progress-table-wrap">
-                            <div class="progress-table">
+                            <div class="progress-table" id="role-table">
                                 <div class="table-head">
                                     <div class="serial col-1">id</div>
                                     <div class="serial col-1">Role</div>
@@ -154,15 +154,11 @@
                                     <div class="serial col-2">11-02-2021</div>
                                     <div class="serial col-2">12-12-2022</div>
                                 </div>
-                                <div class="table-row addRow-0">
-
-                                </div>
-
-                                <div class="table-row">
-                                    <div class="mx-auto p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id="add">Add</button></div>
-                                </div>
                             </div>
                         </div>
+                         <div class="row">
+                                    <div class="mx-auto p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal" id="add">Add</button></div>
+                                </div>
                     </div>
                 </div>
 
@@ -182,36 +178,36 @@
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
                                                 <label>Role</label>
-                                                <input type="text" class="form-control" id="" placeholder="Role">
+                                                <input type="text" class="form-control" id="role-info" placeholder="Role">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
                                                 <label>Description</label>
-                                                <input type="text" class="form-control" id="" placeholder="Description">
+                                                <input type="text" class="form-control" id="desc-info" placeholder="Description">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
                                                 <label>Neighborhood</label>
-                                                <input type="text" class="form-control" id="" placeholder="Neighborhood">
+                                                <input type="text" class="form-control" id="neighborhood-info" placeholder="Neighborhood">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-4 mx-auto">
                                                 <label>Start Date</label>
-                                                <input type="text" class="form-control" id="">
+                                                <input type="text" class="form-control" id="start-date">
                                             </div>
                                             <div class="form-group col-md-4 mx-auto">
                                                 <label>End Date</label>
-                                                <input type="text" class="form-control" id="">
+                                                <input type="text" class="form-control" id="end-date">
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary mx-auto">Add User</button>
+                                    <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal" id="close-user">Close</button>
+                                    <button type="button" class="btn btn-primary mx-auto" id="add-user">Add User</button>
                                 </div>
                             </div>
                         </div>
@@ -340,9 +336,20 @@
         <script src="./assets/js/main.js"></script>
 
         <script>
-            $("#add").click(function() {
+            i = 4; // place holder for user ID until database is ready
+            
+            
+            // Button action when add is clicked
+            $("#add-user").click(function() {
                 console.log("Add pressed");
+                $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-3">' + $("#desc-info").val() + '</div><div class="serial col-3">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div></div>');
+                i++;
+                $("#close-user").click();
             })
+            
+            
+            
+            
         </script>
 
     </body>
