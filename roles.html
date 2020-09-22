@@ -211,6 +211,7 @@
                                         </div>
                                     </form>
                                 </div>
+
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal" id="close-user">Close</button>
                                     <button type="button" class="btn btn-primary mx-auto" id="add-user">Add User</button>
@@ -344,18 +345,19 @@
         <script>
             i = 4; // place holder for user ID until database is ready
 
-
             // Button action when add is clicked
             $("#add-user").click(function() {
                 console.log("Add pressed");
                 $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-3">' + $("#desc-info").val() + '</div><div class="serial col-3">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div></div>');
                 i++;
                 $("#close-user").click();
-            })
-
-
-
-
+            });
+            
+            $('#start-date').datepicker({
+            }); 
+            
+            $('#end-date').datepicker({
+            }); 
         </script>
 
     </body>
