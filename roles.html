@@ -395,11 +395,11 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-4 mx-auto">
                                                 <label>Start Date</label>
-                                                <input type="date" class="form-control" id="start-date">
+                                                <input type="text" class="form-control" id="start-date">
                                             </div>
                                             <div class="form-group col-md-4 mx-auto">
                                                 <label>End Date</label>
-                                                <input type="" class="form-control" id="end-date">
+                                                <input type="text" class="form-control" id="end-date">
                                             </div>
                                         </div>
                                     </form>
@@ -541,7 +541,7 @@
 
             // Button action when add is clicked
             $("#add-role").click(function() {
-                $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-2">' + $("#desc-info").val() + '</div><div class="serial col-2">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div>   <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#roleModal"></div></div>');
+                $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-2">' + $("#desc-info").val() + '</div><div class="serial col-2">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div>   <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div></div>');
                 i++;
                 $("#close-user").click();
             });
