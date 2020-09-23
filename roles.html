@@ -30,6 +30,13 @@
             .btn-success{
                 background-color: #4BB543 !important;
             }
+
+            .edit-icon {
+                height: 25px;
+                width: 25px;
+
+            }
+
         </style>
     </head>
     <body>
@@ -48,14 +55,14 @@
         <header>
             <!-- Header Start -->
             <div class="header-area header-transparent">
-                <div class="main-header ">
+                <div class="main-header">
                     <div class="header-bottom header-sticky bg-dark">
                         <div class="container-fluid">
                             <div class="row align-items-center">
                                 <!-- Logo -->
                                 <div class="col-xl-2 col-lg-2">
                                     <div class="logo">
-                                        <a href="index.html"><img src="" alt="Logo"></a>
+                                        <a href="index.html">C2E</a>
                                     </div>
                                 </div>
                                 <div class="col-xl-10 col-lg-10">
@@ -124,47 +131,50 @@
                                 <div class="table-head">
                                     <div class="serial col-1">id</div>
                                     <div class="serial col-1">Role</div>
-                                    <div class="serial col-3">Description</div>
-                                    <div class="serial col-3">Neighborhood</div>
+                                    <div class="serial col-2">Description</div>
+                                    <div class="serial col-2">Neighborhood</div>
                                     <div class="serial col-2">Start</div>
                                     <div class="serial col-2">End</div>
+                                    <div class="serial col-2"></div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial col-1">01</div>
                                     <div class="serial col-1">Admin</div>
-                                    <div class="serial col-3">Full control</div>
-                                    <div class="serial col-3">C2E</div>
+                                    <div class="serial col-2">Full control</div>
+                                    <div class="serial col-2">C2E</div>
                                     <div class="serial col-2">01-15-2020</div>
                                     <div class="serial col-2">02-15-2020</div>
-
+                                    <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#roleModal"></div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial col-1">02</div>
                                     <div class="serial col-1">User</div>
-                                    <div class="serial col-3">Limited control</div>
-                                    <div class="serial col-3">C2E</div>
+                                    <div class="serial col-2">Limited control</div>
+                                    <div class="serial col-2">C2E</div>
                                     <div class="serial col-2">04-15-2020</div>
                                     <div class="serial col-2">06-27-2020</div>
+                                    <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#roleModal"></div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial col-1">03</div>
                                     <div class="serial col-1">Visitor</div>
-                                    <div class="serial col-3">No control</div>
-                                    <div class="serial col-3">None</div>
+                                    <div class="serial col-2">No control</div>
+                                    <div class="serial col-2">None</div>
                                     <div class="serial col-2">11-02-2021</div>
                                     <div class="serial col-2">12-12-2022</div>
+                                    <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#roleModal"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="mx-auto p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addModal" id="add">Add</button></div>
+                            <div class="mx-auto p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#roleModal" id="add">Add</button></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="container">
                     <!-- Modal -->
-                    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                    <div class="modal fade" id="roleModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -224,7 +234,7 @@
             <!-- End Align Area -->
         </main>
         <footer>
-            <div class="footer-wrappper footer-bg">
+            <div class="footer-wrappper footer-bg ">
                 <!-- Footer Start-->
                 <div class="footer-area footer-padding">
                     <div class="container">
@@ -247,7 +257,7 @@
                             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
                                 <div class="single-footer-caption mb-50">
                                     <div class="footer-tittle">
-                                        <h4>Our solutions</h4>
+                                        <h4>Solutions</h4>
                                         <ul>
                                             <li><a href="#">Link 1</a></li>
                                             <li><a href="#">Link 2</a></li>
@@ -271,7 +281,7 @@
                             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                                 <div class="single-footer-caption mb-50">
                                     <div class="footer-tittle">
-                                        <h4>NAVSEA</h4>
+                                        <h4>More</h4>
                                         <ul>
                                             <li><a href="#">Link 1</a></li>
                                             <li><a href="#">Link 2</a></li>
@@ -348,14 +358,21 @@
             // Button action when add is clicked
             $("#add-user").click(function() {
                 console.log("Add pressed");
-                $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-3">' + $("#desc-info").val() + '</div><div class="serial col-3">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div></div>');
+                $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-2">' + $("#desc-info").val() + '</div><div class="serial col-2">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div>   <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#roleModal"></div></div>');
                 i++;
                 $("#close-user").click();
             });
-            
+
+
+            // Function to fill in Modal box
+            function editUser(){
+
+            }
+
+            // Init both date pickers
             $('#start-date').datepicker({
             }); 
-            
+
             $('#end-date').datepicker({
             }); 
         </script>
