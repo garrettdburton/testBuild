@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>C2E | Roles</title>
+        <title>C2E | Users</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">-->
@@ -43,7 +43,7 @@
                 and (max-width: 760px), (min-device-width: 768px) 
                 and (max-device-width: 1024px)  {
 
-                    .roles-table-container, .section-top-border, .progress-table-wrap, .progress-table {
+                    .users-table-container, .section-top-border, .progress-table-wrap, .progress-table {
                         display: block !important;
                         overflow-x: hidden;
                     }
@@ -145,7 +145,7 @@
                                                     <li><a href="">Reports</a></li>
                                                     <li><a href="roles.html">Roles</a></li>
                                                     <li><a href="#">Report Roles</a></li>
-                                                    <li><a href="users.html">Users</a></li>
+                                                    <li><a href="user.html">Users</a></li>
                                                     <li><a href="">Users Roles</a></li>
                                                     <!-- Button -->
                                                     <li class="button-header margin-left "><a href="register.html" class="btn">Join</a></li>
@@ -176,12 +176,12 @@
                             <div class="row">
                                 <div class="col-xl-8 col-lg-11 col-md-12">
                                     <div class="hero__caption hero__caption2">
-                                        <h1 data-animation="bounceIn" data-delay="0.2s">Roles</h1>
+                                        <h1 data-animation="bounceIn" data-delay="0.2s">Users</h1>
                                         <!-- breadcrumb Start -->
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                                <li class="breadcrumb-item"><a href="#">Roles</a></li> 
+                                                <li class="breadcrumb-item"><a href="#">Users</a></li> 
                                             </ol>
                                         </nav>
                                         <!-- breadcrumb End -->
@@ -193,46 +193,37 @@
                 </div>
             </section>
             <div class="whole-wrap">
-                <!-- Roles Table -->
-                <div class="container roles-table-container">
+                <!-- Users Table -->
+                <div class="container users-table-container">
                     <div class="section-top-border">
-                        <h3 class="mb-30">Roles</h3>
+                        <h3 class="mb-30">Users</h3>
                         <div class="progress-table-wrap">
                             <div class="progress-table" id="role-table">
                                 <div class="table-head">
                                     <div class="serial th col-1">ID</div>
-                                    <div class="serial th col-1">Role</div>
-                                    <div class="serial th col-2">Description</div>
-                                    <div class="serial th col-3">Neighborhood</div>
-                                    <div class="serial th col-2">Start</div>
-                                    <div class="serial th col-2">End</div>
-                                    <div class="serial th col-1">Edit</div>
+                                    <div class="serial th col-2">Common User ID</div>
+                                    <div class="serial th col-4">Begin Date</div>
+                                    <div class="serial th col-4">Terminate Date</div>
                                 </div>
                                 <div class="table-row">
                                     <div class="serial td col-1">01</div>
-                                    <div class="serial td col-1">Admin</div>
-                                    <div class="serial td col-2">Full control</div>
-                                    <div class="serial td col-3">C2E</div>
-                                    <div class="serial td col-2">01-15-2020</div>
-                                    <div class="serial td col-2">02-15-2020</div>
+                                    <div class="serial td col-2">x01</div>
+                                    <div class="serial td col-4">06-06-2012</div>
+                                    <div class="serial td col-4">06-06-2020</div>
                                     <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial td col-1">02</div>
-                                    <div class="serial td col-1">User</div>
-                                    <div class="serial td col-2">Limited control</div>
-                                    <div class="serial td col-3">C2E</div>
-                                    <div class="serial td col-2">04-15-2020</div>
-                                    <div class="serial td col-2">06-27-2020</div>
+                                    <div class="serial td col-1">01</div>
+                                    <div class="serial td col-2">x01</div>
+                                    <div class="serial td col-4">06-06-2012</div>
+                                    <div class="serial td col-4">06-06-2020</div>
                                     <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial td col-1">03</div>
-                                    <div class="serial td col-1">Visitor</div>
-                                    <div class="serial td col-2">No control</div>
-                                    <div class="serial td col-3">None</div>
-                                    <div class="serial td col-2">11-02-2021</div>
-                                    <div class="serial td col-2">12-12-2022</div>
+                                    <div class="serial td col-1">01</div>
+                                    <div class="serial td col-2">x01</div>
+                                    <div class="serial td col-4">06-06-2012</div>
+                                    <div class="serial td col-4">06-06-2020</div>
                                     <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div>
                                 </div>
                             </div>
