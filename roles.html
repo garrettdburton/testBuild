@@ -32,8 +32,68 @@
             }
 
             .edit-icon {
-                height: 25px;
+                height: 25px !important;
                 width: 25px;
+            }
+            /*
+           This query will take effect for any screen smaller than 760px and also iPads specifically.
+            */
+            @media
+                only screen 
+                and (max-width: 760px), (min-device-width: 768px) 
+                and (max-device-width: 1024px)  {
+
+                    /* Force table to not be like tables anymore */
+                    .progress-table, .table-head, tbody, .th, .td, .table-row {
+                        display: block !important;
+                    }
+
+                    /* Hide table headers (but not display: none;, for accessibility) */
+                    .table-head .th  {
+                        position: absolute !important;
+                        top: -9999px !important;
+                        left: -9999px !important;
+                    }
+
+                   .table-row  {
+                        margin: 0 0 1rem 0 !important;
+                    }
+
+                   .table-row:nth-child(odd) {
+                        background: #ccc !important;
+                        
+                    }
+
+                    .td {
+                        /* Behave  like a "row" */
+                        border: none !important;
+                        border-bottom: 1px solid #eee !important;
+                        position: relative !important;
+                        padding-left: 50% !important;
+                    }
+                    
+                    .td:before {
+                        /* Now like a table header */
+                        position: absolute !important;
+                        /* Top/left values mimic padding */
+                        top: 0 !important;
+                        left: 6px !important;
+                        width: 45% !important;
+                        padding-right: 10px !important;
+                        white-space: nowrap !important;
+                    }
+                    
+
+                    /*
+                    Label the data
+                    */
+                    .td:nth-of-type(1):before { content: "ID"; !important }
+                    .td:nth-of-type(2):before { content: "Role";  !important}
+                    .td:nth-of-type(3):before { content: "Description";  !important}
+                    .td:nth-of-type(4):before { content: "Neighborhood";  !important}
+                    .td:nth-of-type(5):before { content: "Start";  !important}
+                    .td:nth-of-type(6):before { content: "End";  !important}
+                    .td:nth-of-type(7):before { content: "Edit";  !important}
             }
 
         </style>
@@ -129,39 +189,39 @@
                         <div class="progress-table-wrap">
                             <div class="progress-table" id="role-table">
                                 <div class="table-head">
-                                    <div class="serial col-1">id</div>
-                                    <div class="serial col-1">Role</div>
-                                    <div class="serial col-2">Description</div>
-                                    <div class="serial col-3">Neighborhood</div>
-                                    <div class="serial col-2">Start</div>
-                                    <div class="serial col-2">End</div>
-                                    <div class="serial col-1"></div>
+                                    <div class="serial th col-1">ID</div>
+                                    <div class="serial th col-1">Role</div>
+                                    <div class="serial th col-2">Description</div>
+                                    <div class="serial th col-3">Neighborhood</div>
+                                    <div class="serial th col-2">Start</div>
+                                    <div class="serial th col-2">End</div>
+                                    <div class="serial th col-1">Edit</div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial col-1">01</div>
-                                    <div class="serial col-1">Admin</div>
-                                    <div class="serial col-2">Full control</div>
-                                    <div class="serial col-3">C2E</div>
-                                    <div class="serial col-2">01-15-2020</div>
-                                    <div class="serial col-2">02-15-2020</div>
+                                    <div class="serial td col-1">01</div>
+                                    <div class="serial td col-1">Admin</div>
+                                    <div class="serial td col-2">Full control</div>
+                                    <div class="serial td col-3">C2E</div>
+                                    <div class="serial td col-2">01-15-2020</div>
+                                    <div class="serial td col-2">02-15-2020</div>
                                     <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial col-1">02</div>
-                                    <div class="serial col-1">User</div>
-                                    <div class="serial col-2">Limited control</div>
-                                    <div class="serial col-3">C2E</div>
-                                    <div class="serial col-2">04-15-2020</div>
-                                    <div class="serial col-2">06-27-2020</div>
+                                    <div class="serial td col-1">02</div>
+                                    <div class="serial td col-1">User</div>
+                                    <div class="serial td col-2">Limited control</div>
+                                    <div class="serial td col-3">C2E</div>
+                                    <div class="serial td col-2">04-15-2020</div>
+                                    <div class="serial td col-2">06-27-2020</div>
                                     <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial col-1">03</div>
-                                    <div class="serial col-1">Visitor</div>
-                                    <div class="serial col-2">No control</div>
-                                    <div class="serial col-3">None</div>
-                                    <div class="serial col-2">11-02-2021</div>
-                                    <div class="serial col-2">12-12-2022</div>
+                                    <div class="serial td col-1">03</div>
+                                    <div class="serial td col-1">Visitor</div>
+                                    <div class="serial td col-2">No control</div>
+                                    <div class="serial td col-3">None</div>
+                                    <div class="serial td col-2">11-02-2021</div>
+                                    <div class="serial td col-2">12-12-2022</div>
                                     <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div>
                                 </div>
                             </div>
@@ -416,6 +476,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <!-- End -->
         </main>
