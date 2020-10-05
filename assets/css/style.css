@@ -32,6 +32,10 @@
 .theme-color {
     color: #c86fff;
 }
+
+#navigation .active {
+    color: #c86fff !important;
+}
 .boxed-btn {
     background: #fff;
     color: #c86fff !important;
@@ -44,7 +48,6 @@
     border: 1px solid #c86fff;
     letter-spacing: 3px;
     text-align: center;
-    color: #c86fff;
     text-transform: uppercase;
     cursor: pointer;
 }

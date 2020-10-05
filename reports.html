@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>C2E | Users</title>
+        <title>C2E | Reports</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">-->
@@ -43,7 +43,7 @@
                 and (max-width: 760px), (min-device-width: 768px) 
                 and (max-device-width: 1024px)  {
 
-                    .users-table-container, .section-top-border, .progress-table-wrap, .progress-table {
+                    .Reports-table-container, .section-top-border, .progress-table-wrap, .progress-table {
                         display: block !important;
                         overflow-x: hidden;
                     }
@@ -95,9 +95,12 @@
                     Label the data
                     */
                     .td:nth-of-type(1):before { content: "ID"; !important }
-                    .td:nth-of-type(2):before { content: "Common User ID";  !important}
-                    .td:nth-of-type(3):before { content: "Begin Date";  !important}
-                    .td:nth-of-type(4):before { content: "Terminate Date";  !important}
+                    .td:nth-of-type(2):before { content: "Role";  !important}
+                    .td:nth-of-type(3):before { content: "Description";  !important}
+                    .td:nth-of-type(4):before { content: "Neighborhood";  !important}
+                    .td:nth-of-type(5):before { content: "Start";  !important}
+                    .td:nth-of-type(6):before { content: "End";  !important}
+                    .td:nth-of-type(7):before { content: "Edit";  !important}
                     
                     .edit-icon{
                         min-width: 25px !important;
@@ -137,12 +140,12 @@
                                         <!-- Main-menu -->
                                         <div class="main-menu d-none d-lg-block">
                                             <nav>
-                                                <ul id="navigation">                                                                                          
+                                                <ul id="navigation">                                                                                 
                                                     <li><a href="index.html">Home</a></li>
-                                                    <li><a href="">Reports</a></li>
-                                                    <li><a href="roles.html">Roles</a></li>
+                                                    <li><a href="reports.html">Reports</a></li>
+                                                    <li class="active"><a href="roles.html">Roles</a></li>
                                                     <li><a href="#">Report Roles</a></li>
-                                                    <li class="active" ><a href="user.html">Users</a></li>
+                                                    <li><a href="users.html">Users</a></li>
                                                     <li><a href="">Users Roles</a></li>
                                                     <!-- Button -->
                                                     <li class="button-header margin-left "><a href="register.html" class="btn">Join</a></li>
@@ -173,12 +176,12 @@
                             <div class="row">
                                 <div class="col-xl-8 col-lg-11 col-md-12">
                                     <div class="hero__caption hero__caption2">
-                                        <h1 data-animation="bounceIn" data-delay="0.2s">Users</h1>
+                                        <h1 data-animation="bounceIn" data-delay="0.2s">Reports</h1>
                                         <!-- breadcrumb Start -->
                                         <nav aria-label="breadcrumb">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                                <li class="breadcrumb-item"><a href="#">Users</a></li> 
+                                                <li class="breadcrumb-item"><a href="#">Reports</a></li> 
                                             </ol>
                                         </nav>
                                         <!-- breadcrumb End -->
@@ -190,43 +193,48 @@
                 </div>
             </section>
             <div class="whole-wrap">
-                <!-- Users Table -->
-                <div class="container users-table-container">
+                <!-- Reports Table -->
+                <div class="container reports-table-container">
                     <div class="section-top-border">
-                        <h3 class="mb-30">Users</h3>
+                        <h3 class="mb-30">Reports</h3>
                         <div class="progress-table-wrap">
-                            <div class="progress-table" id="user-table">
-                                <div class="table-head">
-                                    <div class="serial th col-1">ID</div>
-                                    <div class="serial th col-2">Common User ID</div>
-                                    <div class="serial th col-4">Begin Date</div>
-                                    <div class="serial th col-4">Terminate Date</div>
+                            <div class="progress-table" id="report-table">
+                               <div class="table-head">
+                                    <div class="serial th col-3">Report Number</div>
+                                    <div class="serial th col-3">Report Title</div>
+                                    <div class="serial th col-3">Catagory</div>
+                                    <div class="serial th col-1">Start</div>
+                                    <div class="serial th col-1">End</div>
+                                    <div class="serial th col-1">Edit</div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial td col-1">01</div>
-                                    <div class="serial td col-2">x01</div>
-                                    <div class="serial td col-4">06-06-2012</div>
-                                    <div class="serial td col-4">06-06-2020</div>
-                                    <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editUserModal"></div>
+                                    <div class="serial td col-3">02</div>
+                                    <div class="serial td col-3">Report 1</div>
+                                    <div class="serial td col-3">Colors</div>
+                                    <div class="serial td col-1">06-05-2021</div>
+                                    <div class="serial td col-1">02-09-2023</div>
+                                    <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editReportModal"></div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial td col-1">01</div>
-                                    <div class="serial td col-2">x01</div>
-                                    <div class="serial td col-4">06-06-2012</div>
-                                    <div class="serial td col-4">06-06-2020</div>
-                                    <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editUserModal"></div>
+                                     <div class="serial td col-3">01</div>
+                                    <div class="serial td col-3">Report 2</div>
+                                    <div class="serial td col-3">Shapes</div>
+                                    <div class="serial td col-1">01-15-2020</div>
+                                    <div class="serial td col-1">02-15-2020</div>
+                                    <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editReportModal"></div>
                                 </div>
                                 <div class="table-row">
-                                    <div class="serial td col-1">01</div>
-                                    <div class="serial td col-2">x01</div>
-                                    <div class="serial td col-4">06-06-2012</div>
-                                    <div class="serial td col-4">06-06-2020</div>
-                                    <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editUserModal"></div>
+                                    <div class="serial td col-3">03</div>
+                                    <div class="serial td col-3">Report 3</div>
+                                    <div class="serial td col-3">Directions</div>
+                                    <div class="serial td col-1">01-15-2020</div>
+                                    <div class="serial td col-1">02-15-2020</div>
+                                    <div class="serial col-1"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editReportModal"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="mx-auto mt-3 p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#userModal" id="add">Add</button></div>
+                            <div class="mx-auto mt-3 p-3"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#reportModal" id="add">Add</button></div>
                         </div>
                     </div>
                 </div>
@@ -352,14 +360,14 @@
                 <!-- End -->
 
 
-                <!--Add New User Modal -->
+                <!--Add New Report Modal -->
                 <div class="container">
                     <!-- Modal -->
-                    <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                    <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="">Add a new user</h5>
+                                    <h5 class="modal-title" id="">Add a new report</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -368,30 +376,36 @@
                                     <form>
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
-                                                <label>User</label>
-                                                <input type="text" class="form-control" id="user-info" placeholder="User">
+                                                <label>Report Number</label>
+                                                <input type="text" class="form-control" id="report-info" placeholder="Report">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
-                                                <label>ID</label>
-                                                <input type="text" class="form-control" id="id-info" placeholder="ID">
+                                                <label>Report Title</label>
+                                                <input type="text" class="form-control" id="desc-info" placeholder="Description">
                                             </div>
                                         </div>
-                                       <div class="form-row">
+                                        <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
-                                                <label>Common User ID</label>
-                                                <input type="text" class="form-control" id="common-info" placeholder="Common User ID">
+                                                <label for="neighborhood-info">Catagory</label>
+                                                <select class="form-control" id="neighborhood-info" placeholder="">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-4 mx-auto">
-                                                <label>Begin Date</label>
-                                                <input type="text" class="form-control" id="begin-date">
+                                                <label>Start Date</label>
+                                                <input type="text" class="form-control" id="start-date">
                                             </div>
                                             <div class="form-group col-md-4 mx-auto">
-                                                <label>Terminate Date</label>
-                                                <input type="text" class="form-control" id="term-date">
+                                                <label>End Date</label>
+                                                <input type="text" class="form-control" id="end-date">
                                             </div>
                                         </div>
                                     </form>
@@ -399,7 +413,7 @@
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary mx-auto" data-dismiss="modal" id="close-user">Close</button>
-                                    <button type="button" class="btn btn-primary mx-auto" id="add-user">Add User</button>
+                                    <button type="button" class="btn btn-primary mx-auto" id="add-report">Add Report</button>
                                 </div>
                             </div>
                         </div>
@@ -407,46 +421,52 @@
                 </div>
                 <!-- End -->
 
-                <!-- Edit User Modal -->
+                <!-- Edit Report Modal -->
                 <div class="container">
                     <!-- Modal -->
-                    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                    <div class="modal fade" id="editReportModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="">Edit Role</h5>
+                                    <h5 class="modal-title" id="">Edit Report</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                  <form>
+                                    <form>
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
-                                                <label>User</label>
-                                                <input type="text" class="form-control" id="user-info" placeholder="User">
+                                                <label>Report Number</label>
+                                                <input type="text" class="form-control" id="report-info" placeholder="Report">
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
-                                                <label>ID</label>
-                                                <input type="text" class="form-control" id="id-info" placeholder="ID">
+                                                <label>Report Title</label>
+                                                <input type="text" class="form-control" id="desc-info" placeholder="Description">
                                             </div>
                                         </div>
-                                       <div class="form-row">
+                                        <div class="form-row">
                                             <div class="form-group mx-auto col-md-8">
-                                                <label>Common User ID</label>
-                                                <input type="text" class="form-control" id="common-info" placeholder="Common User ID">
+                                                <label for="neighborhood-info">Catagory</label>
+                                                <select class="form-control" id="neighborhood-info" placeholder="">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-4 mx-auto">
-                                                <label>Begin Date</label>
-                                                <input type="text" class="form-control" id="begin-date">
+                                                <label>Start Date</label>
+                                                <input type="text" class="form-control" id="start-date">
                                             </div>
                                             <div class="form-group col-md-4 mx-auto">
-                                                <label>Terminate Date</label>
-                                                <input type="text" class="form-control" id="term-date">
+                                                <label>End Date</label>
+                                                <input type="text" class="form-control" id="end-date">
                                             </div>
                                         </div>
                                     </form>
@@ -588,8 +608,8 @@
             i = 4; // place holder for user ID until database is ready
 
             // Button action when add is clicked
-            $("#add-user").click(function() {
-                $("#user-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#user-info").val() + '</div><div class="serial col-2">' + $("#desc-info").val() + '</div><div class="serial col-2">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div>   <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editUserModal"></div></div>');
+            $("#add-role").click(function() {
+                $("#role-table").append(' <div class="table-row"><div class="serial col-1">0' + i + '</div><div class="serial col-1">' + $("#role-info").val() + '</div><div class="serial col-2">' + $("#desc-info").val() + '</div><div class="serial col-2">' + $("#neighborhood-info").val() + '</div><div class="serial col-2">' + $("#start-date").val() + '</div> <div class="serial col-2">' + $("#end-date").val() + '</div>   <div class="serial col-2"><img src="assets/img/edit.png" class="img edit-icon" data-toggle="modal" data-target="#editRoleModal"></div></div>');
                 i++;
                 $("#close-user").click();
             });
