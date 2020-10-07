@@ -33,9 +33,10 @@
     color: #c86fff;
 }
 
-#navigation .active {
-    color: #c86fff !important;
+.navbar-nav{
+    padding: 24px !important;
 }
+
 .boxed-btn {
     background: #fff;
     color: #c86fff !important;
